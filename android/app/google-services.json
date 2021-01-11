@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "416147577678",
+    "project_id": "loginscreenf-48712",
+    "storage_bucket": "loginscreenf-48712.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416147577678:android:8ad39d2ced5d5a9a5a1c1f",
+        "android_client_info": {
+          "package_name": "com.loginfirebasey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416147577678-a2fn0tl19j9pi2q3mahuqo8vgurf9nfq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdZRQLqy1GUdaIdWOVDBti23ghR9EexP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416147577678-a2fn0tl19j9pi2q3mahuqo8vgurf9nfq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
