@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import { View, TouchableHighlight, Text, TextInput, StyleSheet } from 'react-native'
+import { AuthContext } from '../../navigation/AuthProvider'
 
 export const SignupScreen = ({ navigation }) => {
+    const [email, setEmail] = useState()
+    const [password, setPassword] = useState()
+    const [confirmPassword, setConfirmPassword] = useState()
 
-
+    const { register } = useContext(AuthContext)
     return (
         <View style={styles.container}>
             <TextInput
@@ -23,29 +27,24 @@ export const SignupScreen = ({ navigation }) => {
                 style={styles.textInput}
 
             />
+            {/* <TextInput
+                placeholder='Password'
+                onChangeText={(text) => setConfirmPassword(text)}
+                autoCapitalize="none"
+                secureTextEntry={true}
+                style={styles.textInput}
 
-            <View style={styles.touchablePosition}>
+            /> */}
+
+            <View >
                 <TouchableHighlight
                     style={styles.touchable}
-                    onPress={''}
+                    onPress={register(email, password)}
                 >
-                    <Text style={styles.Text}>Signup with email</Text>
+                    <Text style={styles.Text}>Signup </Text>
                 </TouchableHighlight>
             </View>
-            <View style={styles.touchablePosition} >
-                <TouchableHighlight
-                    style={styles.touchable}
-                    onPress={''}
-                >
-                    <Text style={styles.Text}>Login</Text>
-                </TouchableHighlight>
-            </View>
-            <TouchableHighlight
-                style={styles.touchable}
-                onPress={''}
-            >
-                <Text style={styles.Text}>LogOut</Text>
-            </TouchableHighlight>
+
         </View>
     )
 }
