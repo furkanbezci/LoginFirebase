@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import StartScreen from '../screens/StartScreen'
-import LoginScreen from '../screens/LoginScreen'
-import { SignupScreen } from '../screens/SignupScreen'
+import StartScreen from '../screens/StartScreen';
+import LoginScreen from '../screens/LoginScreen';
+import { SignupScreen } from '../screens/SignupScreen';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Stack = createStackNavigator();
 

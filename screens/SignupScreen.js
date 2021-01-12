@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react'
 import { View, TouchableHighlight, Text, TextInput, StyleSheet } from 'react-native'
-import { AuthContext } from '../../navigation/AuthProvider'
+import { AuthContext } from '../navigation/AuthProvider'
 
 export const SignupScreen = ({ navigation }) => {
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState()
 
     const { register } = useContext(AuthContext)

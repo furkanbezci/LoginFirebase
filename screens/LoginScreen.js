@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react'
 import { View, TouchableHighlight, Text, TextInput, StyleSheet } from 'react-native'
-import { AuthContext } from '../../navigation/AuthProvider'
+import { AuthContext } from '../navigation/AuthProvider'
 
 const LoginScreen = ({ navigation }) => {
 
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     const { login } = useContext(AuthContext)
 
@@ -92,6 +92,6 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     Text: {
-        color: 'rgb(232, 223, 223)',
+        color: 'black',
     }
 })

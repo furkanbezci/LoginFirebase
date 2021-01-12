@@ -14,6 +14,7 @@ export const Routes = () => {
         if (initializing) setInitializing(false)
     }
     useEffect(() => {
+        console.log('this worked')
         const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
         return subscriber; // unsubscribe on unmount
     }, []);

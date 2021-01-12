@@ -9,7 +9,7 @@ const StartScreen = ({ navigation }) => {
                 imageContainerStyles={{ marginBottom: -40, width: '100%', marginTop: -80 }}
                 titleStyles={{ marginBottom: -20 }}
                 onSkip={() => navigation.navigate('LoginScreen')}
-                onDone={() => navigation.replace('LoginScreen')}
+                onDone={() => navigation.navigate('LoginScreen')}
                 pages={[
 
                     {
