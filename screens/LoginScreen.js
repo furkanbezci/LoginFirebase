@@ -1,6 +1,10 @@
 import React, { useState, useContext } from 'react'
-import { View, TouchableHighlight, Text, TextInput, StyleSheet } from 'react-native'
+import { View, TouchableHighlight, Text, TextInput, StyleSheet, Image } from 'react-native'
 import { AuthContext } from '../navigation/AuthProvider'
+import FormInput from '../components/Input'
+import FormButton from '../components/FormButton'
+import SocialButton from '../components/SocialButton'
+
 
 const LoginScreen = ({ navigation }) => {
 
@@ -12,6 +16,11 @@ const LoginScreen = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
+            <Image source={require('../assets/ss.jpg')}
+                style={styles.logo}
+            />
+            <Text>React Native Login App</Text>
+            <FormInput />
             <TextInput
                 placeholder='Email'
                 onChangeText={(text) => setEmail(text)}
@@ -33,7 +42,7 @@ const LoginScreen = ({ navigation }) => {
             <View >
                 <TouchableHighlight
 
-                    onPress={navigation.replace('SignupScreen')}
+                    onPress={navigation.navigate('SignupScreen')}
                 >
                     <Text style={styles.Text}>Signup with email</Text>
                 </TouchableHighlight>
@@ -68,6 +77,10 @@ export default LoginScreen
 const styles = StyleSheet.create({
     container: {
         padding: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 20,
+        paddingTop: 50
     },
     textInput: {
         borderWidth: 2,
@@ -93,5 +106,10 @@ const styles = StyleSheet.create({
     },
     Text: {
         color: 'black',
+    },
+    logo: {
+        width: 150,
+        height: 150,
+        resizeMode: 'cover',
     }
 })

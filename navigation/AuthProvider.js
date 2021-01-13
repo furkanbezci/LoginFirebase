@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
                 setUser,
                 login: async (email, password) => {
                     try {
-                        await auth().signInWithEmailAndPassword(email, password)
+                        // await auth().signInWithEmailAndPassword(email, password)
                     }
                     catch (e) {
                         console.log(e)
@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
                 },
                 register: async (email, password) => {
                     try {
-                        await auth().createUserWithEmailAndPassword(email, password)
+                        // await auth().createUserWithEmailAndPassword(email, password)
                     }
                     catch (e) {
 

@@ -3,7 +3,8 @@ import { View, Text, StyleSheet, Button, Image, TouchableOpacity, Touchable } fr
 import Onboarding from 'react-native-onboarding-swiper';
 
 const Dots = ({ selected }) => {
-    let = backgroundColor;
+
+    let backgroundColor;
 
     backgroundColor = selected ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.3)'
     return (
@@ -22,7 +23,8 @@ const Dots = ({ selected }) => {
 
 
 const Skip = ({ ...props }) => {
-    <Button
+
+    return <Button
         title='Skip'
         color='#000000'
         {...props}
@@ -38,7 +40,7 @@ const Next = ({ ...props }) => {
 const Done = ({ ...props }) => {
     <TouchableOpacity>
         style={{ marginHorizontal: 10 }}
-        {...props}
+
     </TouchableOpacity>
 }
 
@@ -50,6 +52,7 @@ const StartScreen = ({ navigation }) => {
                 SkipButtonComponent={Skip}
                 NextButtonComponent={Next}
                 DoneButtonComponent={Done}
+                DotComponent={Dots}
                 imageContainerStyles={{ marginBottom: -40, width: '100%', marginTop: -80 }}
                 titleStyles={{ marginBottom: -20 }}
                 onSkip={() => navigation.navigate('LoginScreen')}

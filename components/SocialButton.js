@@ -2,7 +2,7 @@ import React from 'react'
 import { View, TouchableOpacity, Text, Touchable } from 'react-native'
 import { color } from 'react-native-reanimated'
 import { windowHeight, windowWidth } from '../other/Dimensions'
-//! import Icon from 'react-native-vector-icons/FontAwesome';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const SocialButton = ({
     buttonTitle,
@@ -16,7 +16,7 @@ const SocialButton = ({
     return (
         <TouchableOpacity style={[styles.buttonContainer, { backgroundColor: bgColor }]} {...rest}  >
             <View style={iconWrapper}>
-                {/* <FontAwesome name={btnType} size={22} color={color} style={styles.icon} /> */}
+                <FontAwesome name={btnType} size={22} color={color} style={styles.icon} />
             </View>
             <View style={styles.btnTxtWrapper}>
                 <Text style={styles.buttonText, { color: color }}> {buttonTitle}</Text>
