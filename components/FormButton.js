@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, TouchableOpacity, Text, Touchable } from 'react-native'
+import { View, TouchableOpacity, Text, StyleSheet } from 'react-native'
 import { windowHeight, windowWidth } from '../other/Dimensions'
 
 const FormButton = ({ buttonTitle, ...rest }) => {

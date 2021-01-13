@@ -1,19 +1,21 @@
 import { windowHeight, windowWidth } from '../other/Dimensions'
 import React from 'react'
 import { StyleSheet, TextInput, View } from 'react-native'
-import Antdesign from 'react-native-vector-icons'
+import Antdesign from 'react-native-vector-icons/AntDesign'
 
-const Input = ({ labelValue, placeholderText, ...rest }) => {
+const Input = ({ labelValue, placeholderText, iconType, ...rest }) => {
     return (
         <View style={styles.inputContainer}  >
-            <View>
+            <View style={styles.iconStyle}>
                 <Antdesign name={iconType} size={25} color='#666' />
-            </View>
+            </View >
             <TextInput
                 style={styles.input}
                 value={labelValue}
                 placeholder={placeholderText}
                 placeholderTextColor="#666"
+                numberOfLines={1}
+
                 {...rest}
 
             />
@@ -63,5 +65,6 @@ const styles = StyleSheet.create({
         fontSize: 16,
         borderRadius: 8,
         borderWidth: 1,
+        backgroundColor: 'purple'
     },
 })

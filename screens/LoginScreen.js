@@ -1,9 +1,11 @@
 import React, { useState, useContext } from 'react'
 import { View, TouchableHighlight, Text, TextInput, StyleSheet, Image } from 'react-native'
 import { AuthContext } from '../navigation/AuthProvider'
-import FormInput from '../components/Input'
+import Input from '../components/Input'
 import FormButton from '../components/FormButton'
 import SocialButton from '../components/SocialButton'
+import { windowHeight, windowWidth } from '../other/Dimensions'
+
 
 
 const LoginScreen = ({ navigation }) => {
@@ -19,25 +21,20 @@ const LoginScreen = ({ navigation }) => {
             <Image source={require('../assets/ss.jpg')}
                 style={styles.logo}
             />
-            <Text>React Native Login App</Text>
-            <FormInput />
-            <TextInput
-                placeholder='Email'
-                onChangeText={(text) => setEmail(text)}
-                autoCompleteType="email"
-                textContentType="emailAddress"
-                keyboardType="email-address"
-                autoCapitalize="none"
-                style={styles.textInput}
-            />
-            <TextInput
-                placeholder='Password'
-                onChangeText={(text) => setPassword(text)}
-                autoCapitalize="none"
-                secureTextEntry={true}
-                style={styles.textInput}
 
+            <Text>React Native Login App</Text>
+            <Input
+                placeholderText='Email'
+                iconType='user'
+                onPress={(email) => setEmail(email)}
             />
+            <Input
+                placeholderText='Password'
+                iconType='lock'
+                secureTextEntry={true}
+                onPress={(email) => setEmail(email)}
+            />
+
 
             <View >
                 <TouchableHighlight
@@ -108,7 +105,7 @@ const styles = StyleSheet.create({
         color: 'black',
     },
     logo: {
-        width: 150,
+        width: 250,
         height: 150,
         resizeMode: 'cover',
     }

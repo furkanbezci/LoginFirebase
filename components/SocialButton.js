@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, TouchableOpacity, Text, Touchable } from 'react-native'
+import { View, TouchableOpacity, Text, StyleSheet } from 'react-native'
 import { color } from 'react-native-reanimated'
 import { windowHeight, windowWidth } from '../other/Dimensions'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
