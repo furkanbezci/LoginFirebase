@@ -1,11 +1,55 @@
 import React from 'react'
-import { View, Text, StyleSheet, Button, Image } from 'react-native'
+import { View, Text, StyleSheet, Button, Image, TouchableOpacity, Touchable } from 'react-native'
 import Onboarding from 'react-native-onboarding-swiper';
+
+const Dots = ({ selected }) => {
+    let = backgroundColor;
+
+    backgroundColor = selected ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.3)'
+    return (
+        <View
+            style={{
+                width: 5,
+                height: 5,
+                marginHorizontal: 3,
+                backgroundColor
+            }}
+        >
+        </View>
+    )
+
+}
+
+
+const Skip = ({ ...props }) => {
+    <Button
+        title='Skip'
+        color='#000000'
+        {...props}
+    />
+}
+const Next = ({ ...props }) => {
+    <Button
+        title='Next'
+        color='#000000'
+        {...props}
+    />
+}
+const Done = ({ ...props }) => {
+    <TouchableOpacity>
+        style={{ marginHorizontal: 10 }}
+        {...props}
+    </TouchableOpacity>
+}
+
 
 const StartScreen = ({ navigation }) => {
     return (
         <View style={{ flex: 1 }}>
             <Onboarding
+                SkipButtonComponent={Skip}
+                NextButtonComponent={Next}
+                DoneButtonComponent={Done}
                 imageContainerStyles={{ marginBottom: -40, width: '100%', marginTop: -80 }}
                 titleStyles={{ marginBottom: -20 }}
                 onSkip={() => navigation.navigate('LoginScreen')}
@@ -14,7 +58,6 @@ const StartScreen = ({ navigation }) => {
 
                     {
                         backgroundColor: 'black',
-
                         image: <Image
                             style={{ width: 400, height: 470 }}
                             source={require('../assets/space3.jpg')} />,
